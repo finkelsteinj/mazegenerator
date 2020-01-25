@@ -1,0 +1,10 @@
+# class files
+/out/
+
+# user-specific files
+.idea/dictionaries
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/vcs.xml
+.idea/
+
