@@ -12,7 +12,7 @@ struct BmpHeader {
 
     BmpHeader(int32_t imageSize) : sizeOfBitmapFile(54 + imageSize) {};
     ~BmpHeader() {};
-};
+} __attribute__((packed));
 
 struct DibHeader {
     uint32_t sizeOfThisHeader = 40;
@@ -59,6 +59,9 @@ public:
       pixels(vector<Pixel>(width * height))
     {};
     ~ColorImage() {};
+
+    int32_t getWidth() const;
+    int32_t getHeight() const;
 
     Pixel getPixel(int32_t x, int32_t y) const;
     void setPixel(Pixel& p, int32_t x, int32_t y);
